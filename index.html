@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirliburc | Tarot və Astrologiya Analizləri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --purple: #2c003e;
+            --dark-purple: #1a0026;
+            --light-text: #f4f4f4;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-purple);
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(44, 0, 62, 0.8), rgba(26, 0, 38, 1)),
+                url('https://www.transparenttextures.com/patterns/stardust.png'); /* Ulduzlu arxa fon */
+            color: var(--light-text);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 2px solid var(--gold);
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 0 0 15px var(--gold);
+        }
+
+        header p {
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+
+        /* Ana Paket (7-li Paket) */
+        .main-bundle {
+            background: rgba(44, 0, 62, 0.6);
+            border: 3px solid var(--gold);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 1s ease-out;
+        }
+
+        .main-bundle::before {
+            content: "ƏN ÇOX SATILAN";
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--gold);
+            color: black;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            margin: 20px 0;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #ff4d4d;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .new-price {
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        /* Analiz Kartları */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--gold);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #ccc;
+            height: 100px;
+            overflow-y: auto;
+        }
+
+        .card-price {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        /* Düymələr */
+        .btn {
+            display: inline-block;
+            background: var(--gold);
+            color: black;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #fff;
+            box-shadow: 0 0 20px var(--gold);
+            transform: scale(1.05);
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128c7e;
+            color: white;
+        }
+
+        /* Animasiyalar */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+        /* YouTube Player Gizli */
+        #music-player { position: fixed; bottom: -100px; left: -100px; }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="music-player">
+        <iframe width="100" height="100" src="https://www.youtube.com/embed/NToDDXtv5_I?autoplay=1&loop=1&playlist=NToDDXtv5_I" frameborder="0" allow="autoplay"></iframe>
+    </div>
+
+    <div class="container">
+        <header>
+            <p>Xoş Gəldiniz</p>
+            <h1>@SIRLIBURC</h1>
+            <p>Gələcəyin Sirləri Ulduzlarda Gizlidir...</p>
+        </header>
+
+        <section class="main-bundle">
+            <h2>✨ MÖHTƏŞƏM 7-Lİ PAKET ✨</h2>
+            <p>Bütün analizləri bir yerdə əldə edin və həyatınıza tam işıq tutun!</p>
+            <div class="price-tag">
+                <span class="old-price">49 AZN</span>
+                <span class="new-price">19 AZN</span>
+            </div>
+            <p><i>(Xüsusi 25% + Bonus Endirim!)</i></p>
+            <ul style="list-style: none; padding: 0; margin: 20px 0; display: grid; grid-template-columns: 1fr 1fr; text-align: left; gap: 10px; color: var(--gold);">
+                <li>🔹 Doğum münasibəti</li>
+                <li>🔹 Karyera analizi</li>
+                <li>🔹 Pul analizi</li>
+                <li>🔹 İllik ulduz analizi</li>
+                <li>🔹 Tarot analizi</li>
+                <li>🔹 Münasibət analizi</li>
+                <li>🔹 Yuxu analizi</li>
+            </ul>
+            <a href="https://wa.me/994998461606?text=Salam!%20Sirliburc%207-li%20Super%20Paketi%20sifariş%20etmək%20istəyirəm." class="btn">SİFARİŞ ET (WhatsApp)</a>
+        </section>
+
+        <h2>🔮 TƏKLİ ANALİZLƏR</h2>
+        
+        <div class="services-grid">
+            <div class="card">
+                <h3>Doğum Münasibəti</h3>
+                <p>Doğulduğunuz andakı planetlərin düzülüşü sizin xarakterinizi və həyat yolunuzu necə müəyyən edir? Taleyinizin kodlarını kəşf edin.</p>
+                <div class="card-price">
+                    <span class="old-price">8 AZN</span><br>
+                    <span class="new-price" style="font-size: 1.5rem;">5 AZN</span>
+                </div>
+                <a href="https://wa.me/994998461606?text=Salam!%20Doğum%20münasibəti%20analizi%20istəyirəm." class="btn whatsapp-btn">Sifariş Et</a>
+            </div>
+
+            <div class="card">
+                <h3>Karyera Analizi</h3>
+                <p>Hansı sahədə daha uğurlu olarsınız? İş həyatındakı maneələr və ulduzların sizə vəd etdiyi zirvə haqqında detallı məlumat.</p>
+                <div class="card-price">
+                    <span class="old-price">10 AZN</span><br>
+                    <span class="new-price" style="font-size: 1.5rem;">7 AZN</span>
+                </div>
+                <a href="https://wa.me/994998461606?text=Salam!%20Karyera%20analizi%20istəyirəm." class="btn whatsapp-btn">Sifariş Et</a>
+            </div>
+
+            <div class="card">
+                <h3>Pul Analizi</h3>
+                <p>Maddi vəziyyətiniz nə vaxt düzələcək? Bolluq və bərəkət enerjisini həyatınıza necə cəlb edə bilərsiniz? Maddi analiz.</p>
+                <div class="card-price">
+                    <span class="old-price">7 AZN</span><br>
+                    <span class="new-price" style="font-size: 1.5rem;">4 AZN</span>
+                </div>
+                <a href="https://wa.me/994998461606?text=Salam!%20Pul%20analizi%20istəyirəm." class="btn whatsapp-btn">Sifariş Et</a>
+            </div>
+
+            <div class="card">
+                <h3>İllik Ulduz Analizi</h3>
+                <p>Bu il sizi nələr gözləyir? Şanslı aylarınız, diqqət etməli olduğunuz tarixlər və illik proqnozunuz.</p>
+                <div class="card-price">
+                    <span class="old-price">9 AZN</span><br>
+                    <span class="new-price" style="font-size: 1.5rem;">6 AZN</span>
+                </div>
+                <a href="https://wa.me/994998461606?text=Salam!%20İllik%20ulduz%20analizi%20istəyirəm." class="btn whatsapp-btn">Sifariş Et</a>
+            </div>
+
+            <div class="card">
+                <h3>Tarot Analizi</h3>
+                <p>Kartlar heç vaxt yalan demir. Sizi düşündürən suallara kartların dili ilə mistik cavablar və gələcək proqnozları.</p>
+                <div class="card-price">
+                    <span class="old-price">6 AZN</span><br>
+                    <span class="new-price" style="font-size: 1.5rem;">4 AZN</span>
+                </div>
+                <a href="https://wa.me/994998461606?text=Salam!%20Tarot%20analizi%20istəyirəm." class="btn whatsapp-btn">Sifariş Et</a>
+            </div>
+
+            <div class="card">
+                <h3>Münasibət Analizi</h3>
+                <p>Partnyorunuzla uyğunluğunuz, münasibətin gələcəyi və aradakı energetik bağların dərin analizi.</p>
+                <div class="card-price">
+                    <span class="old-price">8 AZN</span><br>
+                    <span class="new-price" style="font-size: 1.5rem;">5 AZN</span>
+                </div>
+                <a href="https://wa.me/994998461606?text=Salam!%20Münasibət%20analizi%20istəyirəm." class="btn whatsapp-btn">Sifariş Et</a>
+            </div>
+
+            <div class="card">
+                <h3>Yuxu Analizi</h3>
+                <p>Gördüyünüz sirli yuxular sizə nə demək istəyir? Alt şüurunuzun göndərdiyi mesajları peşəkar şəkildə izah edirik.</p>
+                <div class="card-price">
+                    <span class="old-price">5 AZN</span><br>
+                    <span class="new-price" style="font-size: 1.5rem;">2 AZN</span>
+                </div>
+                <a href="https://wa.me/994998461606?text=Salam!%20Yuxu%20analizi%20istəyirəm." class="btn whatsapp-btn">Sifariş Et</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Sirliburc - Bütün hüquqlar qorunur.</p>
+            <p>Tarot və Astrologiya xidmətləri üçün rəsmi satış səhifəsi.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Səhifə yüklənəndə ulduzların sayrışması və ya kiçik effektlər üçün bura kod əlavə edilə bilər.
+        console.log("Sirliburc saytı aktivdir!");
+    </script>
+</body>
+</html>
